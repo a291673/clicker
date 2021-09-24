@@ -23,8 +23,6 @@ func _process(delta):
 		print(" ")
 	set_position(pos)
 	
-	
-
 func _on_TextureButton_button_up():
 	vel.x *= 1.02
 	vel.y *= 1.02

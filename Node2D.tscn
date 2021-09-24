@@ -3,29 +3,17 @@
 [ext_resource path="res://Node2D.gd" type="Script" id=1]
 [ext_resource path="res://media/img/gondo.png" type="Texture" id=2]
 [ext_resource path="res://media/img/back.png" type="Texture" id=3]
-[ext_resource path="res://TextureButton.gd" type="Script" id=4]
+[ext_resource path="res://Sprite2.gd" type="Script" id=5]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Canvas" type="CanvasLayer" parent="."]
 
-[node name="Sprite" type="Sprite" parent="Canvas"]
+[node name="Background" type="Sprite" parent="Canvas"]
 position = Vector2( 514.23, 296.219 )
 scale = Vector2( 0.816769, 0.816769 )
 texture = ExtResource( 3 )
-
-[node name="TextureButton" type="TextureButton" parent="Canvas"]
-margin_left = 482.863
-margin_top = 350.0
-margin_right = 626.863
-margin_bottom = 494.0
-texture_normal = ExtResource( 2 )
-expand = true
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Canvas"]
 margin_left = 910.409
@@ -37,5 +25,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="button_up" from="Canvas/TextureButton" to="Canvas/TextureButton" method="_on_TextureButton_button_up"]
-[connection signal="pressed" from="Canvas/TextureButton" to="." method="_on_TextureButton_pressed"]
+[node name="Sprite2" type="Sprite" parent="Canvas"]
+position = Vector2( 479.775, 213.933 )
+texture = ExtResource( 2 )
+script = ExtResource( 5 )
